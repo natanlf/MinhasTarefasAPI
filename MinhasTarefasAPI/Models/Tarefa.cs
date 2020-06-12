@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -16,5 +17,12 @@ namespace MinhasTarefasAPI.Models
         public bool Concluido { get; set; }
         public DateTime Criado { get; set; }
         public DateTime Atualizado { get; set; }
+
+        //Informo que isso está relacionado com o objeto Usuario que está logo abaixo
+        [ForeignKey("Usuario")]
+        public string UsuarioId { get; set; } //declaro um nome de fk
+
+        //Permite ter um objeto Usuário, acima é feito o relacionamento
+        public virtual ApplicationUser Usuario { get; set; }
     }
 }

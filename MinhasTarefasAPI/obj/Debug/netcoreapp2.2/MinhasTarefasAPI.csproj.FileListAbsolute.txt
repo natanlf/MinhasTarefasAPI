@@ -1,0 +1,13 @@
+C:\Workspaces\API REST NET\MinhasTarefasAPI\MinhasTarefasAPI\bin\Debug\netcoreapp2.2\appsettings.Development.json
+C:\Workspaces\API REST NET\MinhasTarefasAPI\MinhasTarefasAPI\bin\Debug\netcoreapp2.2\appsettings.json
+C:\Workspaces\API REST NET\MinhasTarefasAPI\MinhasTarefasAPI\bin\Debug\netcoreapp2.2\Properties\launchSettings.json
+C:\Workspaces\API REST NET\MinhasTarefasAPI\MinhasTarefasAPI\bin\Debug\netcoreapp2.2\MinhasTarefasAPI.deps.json
+C:\Workspaces\API REST NET\MinhasTarefasAPI\MinhasTarefasAPI\bin\Debug\netcoreapp2.2\MinhasTarefasAPI.runtimeconfig.json
+C:\Workspaces\API REST NET\MinhasTarefasAPI\MinhasTarefasAPI\bin\Debug\netcoreapp2.2\MinhasTarefasAPI.runtimeconfig.dev.json
+C:\Workspaces\API REST NET\MinhasTarefasAPI\MinhasTarefasAPI\bin\Debug\netcoreapp2.2\MinhasTarefasAPI.dll
+C:\Workspaces\API REST NET\MinhasTarefasAPI\MinhasTarefasAPI\obj\Debug\netcoreapp2.2\MinhasTarefasAPI.csprojAssemblyReference.cache
+C:\Workspaces\API REST NET\MinhasTarefasAPI\MinhasTarefasAPI\obj\Debug\netcoreapp2.2\MinhasTarefasAPI.RazorAssemblyInfo.cache
+C:\Workspaces\API REST NET\MinhasTarefasAPI\MinhasTarefasAPI\obj\Debug\netcoreapp2.2\MinhasTarefasAPI.RazorAssemblyInfo.cs
+C:\Workspaces\API REST NET\MinhasTarefasAPI\MinhasTarefasAPI\obj\Debug\netcoreapp2.2\MinhasTarefasAPI.AssemblyInfoInputs.cache
+C:\Workspaces\API REST NET\MinhasTarefasAPI\MinhasTarefasAPI\obj\Debug\netcoreapp2.2\MinhasTarefasAPI.AssemblyInfo.cs
+C:\Workspaces\API REST NET\MinhasTarefasAPI\MinhasTarefasAPI\obj\Debug\netcoreapp2.2\MinhasTarefasAPI.RazorTargetAssemblyInfo.cache
