@@ -9,6 +9,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using MinhasTarefasAPI.Database;
+using MinhasTarefasAPI.Repositories;
+using MinhasTarefasAPI.Repositories.Contracts;
 
 namespace MinhasTarefasAPI
 {
@@ -23,6 +25,11 @@ namespace MinhasTarefasAPI
                 //UseSqlite é necessário instalar pelo gerenciador NuGet
                 opt.UseSqlite("Data Source=Database\\MinhasTarefas.db");
             });
+
+            //Repositories
+            services.AddScoped<IUsuarioRepository, UsuarioRepository>();
+            services.AddScoped<ITarefaRepository, TarefaRepository>();
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
