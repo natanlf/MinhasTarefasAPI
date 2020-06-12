@@ -25,6 +25,7 @@ namespace MinhasTarefasAPI.Controllers
             _userManager = userManager;
         }
 
+        [HttpPost("login")]
         public ActionResult Login([FromBody] UsuarioDTO usuarioDTO) {
             //Remove a validação que nesse caso não precisamos
             ModelState.Remove("Nome");
@@ -50,12 +51,14 @@ namespace MinhasTarefasAPI.Controllers
             }
         }
 
+        [HttpPost("")]
         public ActionResult Cadastrar([FromBody] UsuarioDTO usuarioDTO) {
 
             if (ModelState.IsValid)
             {
                 ApplicationUser usuario = new ApplicationUser();
                 usuario.FullName = usuarioDTO.Nome;
+                usuario.UserName = usuarioDTO.Email; //faltava informar o username
                 usuario.Email = usuarioDTO.Email;
                 var resultado = _userManager.CreateAsync(usuario, usuarioDTO.Senha).Result;
 

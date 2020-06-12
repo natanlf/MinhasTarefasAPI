@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using MinhasTarefasAPI.Database;
+using MinhasTarefasAPI.Models;
 using MinhasTarefasAPI.Repositories;
 using MinhasTarefasAPI.Repositories.Contracts;
 
@@ -31,6 +32,9 @@ namespace MinhasTarefasAPI
             services.AddScoped<ITarefaRepository, TarefaRepository>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            //Autenticação
+            services.AddDefaultIdentity<ApplicationUser>().AddEntityFrameworkStores<MinhasTarefasContext>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -46,6 +50,8 @@ namespace MinhasTarefasAPI
                 app.UseHsts();
             }
 
+            app.UseStatusCodePages(); //status de erros
+            app.UseAuthentication(); //autenticação
             app.UseHttpsRedirection();
             app.UseMvc();
         }
