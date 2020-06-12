@@ -11,3 +11,6 @@ C:\Workspaces\API REST NET\MinhasTarefasAPI\MinhasTarefasAPI\obj\Debug\netcoreap
 C:\Workspaces\API REST NET\MinhasTarefasAPI\MinhasTarefasAPI\obj\Debug\netcoreapp2.2\MinhasTarefasAPI.AssemblyInfoInputs.cache
 C:\Workspaces\API REST NET\MinhasTarefasAPI\MinhasTarefasAPI\obj\Debug\netcoreapp2.2\MinhasTarefasAPI.AssemblyInfo.cs
 C:\Workspaces\API REST NET\MinhasTarefasAPI\MinhasTarefasAPI\obj\Debug\netcoreapp2.2\MinhasTarefasAPI.RazorTargetAssemblyInfo.cache
+C:\Workspaces\API REST NET\MinhasTarefasAPI\MinhasTarefasAPI\bin\Debug\netcoreapp2.2\MinhasTarefasAPI.pdb
+C:\Workspaces\API REST NET\MinhasTarefasAPI\MinhasTarefasAPI\obj\Debug\netcoreapp2.2\MinhasTarefasAPI.dll
+C:\Workspaces\API REST NET\MinhasTarefasAPI\MinhasTarefasAPI\obj\Debug\netcoreapp2.2\MinhasTarefasAPI.pdb
