@@ -21,6 +21,11 @@ namespace MinhasTarefasAPI
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            //Tira a validação do modo state
+            services.Configure<ApiBehaviorOptions>(op =>
+            {
+                op.SuppressModelStateInvalidFilter = true;
+            });
             services.AddDbContext<MinhasTarefasContext>(opt =>
             {
                 //UseSqlite é necessário instalar pelo gerenciador NuGet
@@ -31,7 +36,10 @@ namespace MinhasTarefasAPI
             services.AddScoped<IUsuarioRepository, UsuarioRepository>();
             services.AddScoped<ITarefaRepository, TarefaRepository>();
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2)
+                .AddJsonOptions( //para não dar loop no json
+                    options => options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+                );
 
             //Autenticação
             services.AddDefaultIdentity<ApplicationUser>().AddEntityFrameworkStores<MinhasTarefasContext>();

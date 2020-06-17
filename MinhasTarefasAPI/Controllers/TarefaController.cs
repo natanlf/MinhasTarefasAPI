@@ -31,10 +31,15 @@ namespace MinhasTarefasAPI.Controllers
         }
 
         [Authorize]
-        [HttpPost("restaurar")]
+        [HttpGet("restaurar")]
         public ActionResult Restaurar(DateTime data) {
             var usuario = _userManager.GetUserAsync(HttpContext.User).Result;
             return Ok(_tarefaRepository.Restauracao(usuario, data));
+        }
+
+        [HttpGet("modelo")]
+        public ActionResult Modelo() {
+            return Ok(new Tarefa());
         }
     }
 }
