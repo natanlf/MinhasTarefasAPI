@@ -15,5 +15,8 @@ namespace MinhasTarefasAPI.Models
         //Pois uma tarefa pertence a um usuário
         [ForeignKey("UsuarioId")]
         public virtual ICollection<Tarefa> Tarefas { get; set; }
+
+        [ForeignKey("UsuarioId")]
+        public virtual ICollection<Token> Tokens { get; set; }
     }
 }
