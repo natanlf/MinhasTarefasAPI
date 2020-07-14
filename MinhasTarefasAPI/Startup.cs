@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Formatters;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
@@ -42,7 +43,11 @@ namespace MinhasTarefasAPI
             services.AddScoped<ITarefaRepository, TarefaRepository>();
             services.AddScoped<ITokenRepository, TokenRepository>();
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2)
+            services.AddMvc(config => {
+                config.ReturnHttpNotAcceptable = true;
+                config.InputFormatters.Add(new XmlSerializerInputFormatter(config));
+                config.OutputFormatters.Add(new XmlSerializerOutputFormatter());
+            }).SetCompatibilityVersion(CompatibilityVersion.Version_2_2)
                 .AddJsonOptions( //para não dar loop no json
                     options => options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
                 );
